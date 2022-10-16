@@ -7,7 +7,7 @@ import { fromEvent, Observable, Subscription } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent  implements OnInit{
-  title = 'oivan-test';
+  title = 'hacker-news';
   isToggle = false;
   resizeObservable$: Observable<Event> | undefined;
   resizeSubscription$: Subscription | undefined;
