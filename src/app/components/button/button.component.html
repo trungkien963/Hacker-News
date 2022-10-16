@@ -1,0 +1,11 @@
+<a
+  class="btn-link"
+  id="btn-link"
+  *ngIf="type === 'link'"
+  [ngClass]="{ active: active, 'btn-link-menu': isMenu }"
+  href="#"
+  [ngStyle]="{ display: hidden ? 'none' : null }"
+  (click)="handleClick($event)"
+>
+  {{ name }}
+</a>

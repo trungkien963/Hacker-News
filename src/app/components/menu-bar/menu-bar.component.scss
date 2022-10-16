@@ -1,0 +1,50 @@
+.toolbar {
+  padding: 0 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #e67e22;
+  color: white;
+  font-weight: 600;
+  column-gap: 10px;
+  width: 100%;
+  z-index: 1;
+
+  .app-name {
+    color: #095c67;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .navbar {
+    display: flex;
+    column-gap: 10px;
+  }
+  img {
+    width: 25px;
+
+    &.menu-icon {
+      display: none;
+    }
+  }
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 575px) {
+  .toolbar {
+    .navbar {
+      display: none;
+    }
+    img {
+      &.menu-icon {
+        display: flex;
+      }
+    }
+  }
+}

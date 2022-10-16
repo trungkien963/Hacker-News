@@ -1,0 +1,14 @@
+<div class="side-bar" id="side-bar" [hidden]="!isToggle">
+  <oivan-button
+    href="#"
+    *ngFor="let menu of menus"
+    [active]="menu.active"
+    [name]="menu.name"
+    [isMenu]="true"
+    [hidden]="!isToggle"
+    (onClick)="handleClick(menu)"
+  >
+  </oivan-button>
+</div>
+
+<div class="side-bar-overlay" [hidden]="!isToggle" (click)="handleClick($event)"></div>

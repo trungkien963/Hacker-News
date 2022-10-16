@@ -1,0 +1,18 @@
+a.btn-link {
+  text-decoration: none;
+  color: #000;
+  font-weight: normal;
+
+  &.btn-link-menu{
+    color: #fff;
+  }
+
+  &:hover {
+    color: #095c67;
+  }
+  &.active {
+    color: #095c67;
+    font-weight: bold;
+    cursor: initial;
+  }
+}

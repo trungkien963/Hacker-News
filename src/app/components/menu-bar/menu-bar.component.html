@@ -1,0 +1,21 @@
+<div class="toolbar" role="banner">
+  <img class="menu-icon" src="assets/icons/icons8-menu-30.png" alt="" (click)="OnToggleChanged()">
+  <img
+    width="40"
+    alt="Angular Logo"
+    src="https://news.ycombinator.com/y18.gif"
+  />
+  <h5 class="app-name">Hacker News</h5>
+  <span class="navbar">
+    <oivan-button
+      [active]="menu.active"
+      [name]="menu.name"
+      [isMenu]="true"
+      href="#"
+      *ngFor="let menu of menus"
+      (onClick)="handleClick(menu)"
+    >
+      {{ menu.name }}
+    </oivan-button>
+  </span>
+</div>

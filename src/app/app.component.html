@@ -1,0 +1,16 @@
+<div class="oivan">
+  <oivan-menu-bar
+    [menus]="menus"
+    [isToggle]="isToggle"
+    (toggleChanged)="toggleChanged($event)"
+    (onClick)="onClickSidebar($event)"
+  ></oivan-menu-bar>
+  <div class="oivan-body">
+    <oivan-side-bar
+      [menus]="menus"
+      [isToggle]="isToggle"
+      (onClick)="onClickSidebar($event)"
+    ></oivan-side-bar>
+    <router-outlet></router-outlet>
+  </div>
+</div>
