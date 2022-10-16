@@ -4,8 +4,9 @@
     width="40"
     alt="Angular Logo"
     src="https://news.ycombinator.com/y18.gif"
+    (click)="goHome()"
   />
-  <h5 class="app-name">Hacker News</h5>
+  <h5 class="app-name" (click)="goHome()">Hacker News</h5>
   <span class="navbar">
     <oivan-button
       [active]="menu.active"

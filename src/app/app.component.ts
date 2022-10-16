@@ -72,7 +72,7 @@ export class AppComponent  implements OnInit{
   ngOnInit(): void {
     this.resizeObservable$ = fromEvent(window, 'resize');
     this.resizeSubscription$ = this.resizeObservable$.subscribe(() => {
-      if (window.innerWidth > 575) {
+      if (window.innerWidth > 750) {
         this.isToggle = false;
       }
     });
