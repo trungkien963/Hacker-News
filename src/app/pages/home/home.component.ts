@@ -3,16 +3,16 @@ import {
   HostListener,
   OnInit,
   ViewEncapsulation,
-} from '@angular/core';
-import { Router } from '@angular/router';
-import { finalize, fromEvent, Observable, Subscription } from 'rxjs';
-import { ArticlesService } from 'src/app/services/articles.service';
-import { Article } from 'src/app/type';
+} from "@angular/core";
+import { Router } from "@angular/router";
+import { finalize, fromEvent, Observable, Subscription } from "rxjs";
+import { ArticlesService } from "src/app/services/articles.service";
+import { Article } from "src/app/type";
 
 @Component({
-  selector: 'oivan-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  selector: "oivan-home",
+  templateUrl: "./home.component.html",
+  styleUrls: ["./home.component.scss"],
   encapsulation: ViewEncapsulation.None,
 })
 export class HomeComponent implements OnInit {
@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   articles: any[] = [];
   reload = true;
 
-  @HostListener('scroll', ['$event'])
+  @HostListener("scroll", ["$event"])
   onScroll(event: any) {
     if (
       event.target.offsetHeight + event.target.scrollTop >=
@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
         this.pageNumber++;
         this.getActicles();
       } else {
-        removeEventListener('scroll', () => {});
+        removeEventListener("scroll", () => {});
       }
     }
   }
@@ -55,16 +55,17 @@ export class HomeComponent implements OnInit {
           this.loading = false;
         })
       )
-      .subscribe(({ data }) => {
-        if (data.articles.length > 0) {
-          this.articles = this.articles.concat(data.articles);
-        } else {
-          this.reload = false;
-        }
-      });
+      .subscribe(
+        ({data}) => {
+          if (data.articles.length > 0) {
+            this.articles = this.articles.concat(data.articles);
+          } else {
+            this.reload = false;
+          }
+        });
   }
 
   gotoDetail(article: Article) {
-    this.router.navigate(['detail', article.url]);
+    this.router.navigate(["detail", article.url]);
   }
 }

@@ -3,44 +3,59 @@
   color: #495057;
   border-radius: 6px;
   border: 1px solid #e5e5e5;
-  column-gap: 10px;
-  row-gap: 10px;
-  width: 100%;
-  height: 100%;
 
+  card-footer {
+    flex: 1;
+  }
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     cursor: pointer;
   }
+  .title,
+  .sub-title,
+  .description {
+    width: fit-content;
+    margin: 0;
+  }
+  .card-title,
   .card-body {
-    padding: 10px;
     display: flex;
     flex-direction: column;
     row-gap: 5px;
-
-    .title,
-    .sub-title,
+    padding: 10px;
+  }
+  .card-body {
     .description {
-      width: fit-content;
-      margin: 0;
+      color: #757575;
+      font-size: 14px;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
     }
+    .img {
+      width: 100%;
+      height: 165px;
+      object-fit: cover;
+    }
+  }
+  .card-title {
     .title {
       overflow: hidden;
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
+      text-overflow: ellipsis;
     }
     .sub-title {
       color: #757575;
       font-size: 12px;
-    }
-    .description {
-      color: #757575;
-      font-size: 14px;
-    }
-    .img {
-      width: 100%;
-      height: 100%;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: horizontal;
+      text-overflow: ellipsis;
     }
   }
 }

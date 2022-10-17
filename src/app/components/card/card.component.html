@@ -1,10 +1,13 @@
-<div class="card">
-  <div class="card-body">
+<div class="card" #card>
+  <div class="card-title">
     <h4 class="title">{{ title }}</h4>
     <p class="sub-title">
       {{ subTitle }}
     </p>
+  </div>
+  <div class="card-body">
     <img [src]="img || defaultImage" [alt]="img" class="img" />
     <p class="description">{{ description }}</p>
   </div>
+  <div class="card-footer"></div>
 </div>
