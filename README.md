@@ -16,7 +16,7 @@ The system also provide to you GraphQL console, so you can easily see its schema
 
 ## Images
 Home page:
-![Home Page](https://user-images.githubusercontent.com/64910201/196050420-20f26a22-1837-4602-9830-31e25ca47821.png)
+![Home Page](https://user-images.githubusercontent.com/64910201/196117571-d368979b-0e29-4d9c-a777-abdafb25fb31.png)
 
 Detail Page: 
 ![Detail Page](https://user-images.githubusercontent.com/64910201/196050415-2add37e6-f304-4075-8912-7e62e6648ae4.png)
@@ -25,4 +25,3 @@ Responsive
 ![Home Page with responsive](https://user-images.githubusercontent.com/64910201/196050417-13fe0fa3-a1c6-435b-9ec7-dd8aab4876b2.png)
 
 ![Home Page with responsive](https://user-images.githubusercontent.com/64910201/196050419-fb5399b9-844c-4a09-ab23-4c8852b69abe.png)
-
