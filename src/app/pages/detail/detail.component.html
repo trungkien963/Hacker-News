@@ -1,18 +1,20 @@
-<div class="article" *ngIf="!loading">
-  <h1 class="title">{{ article?.title }}</h1>
-  <div class="sub-title">({{ article?.url }})</div>
-  <h3 class="description">{{ article?.description }}</h3>
-  <p class="sub-title">
-    {{ article?.subtitle }}
-  </p>
-  <img
-    [src]="article?.coverImageUrl || defaultImage"
-    [alt]="article?.coverImageUrl"
-    class="img"
-  />
-  <div [innerHTML]="article?.content"></div>
-</div>
+<div class="detail">
+  <div class="article" *ngIf="!loading">
+    <h1 class="title">{{ article?.title }}</h1>
+    <div class="sub-title">({{ article?.url }})</div>
+    <h3 class="description">{{ article?.description }}</h3>
+    <p class="sub-title">
+      {{ article?.subtitle }}
+    </p>
+    <img
+      [src]="article?.coverImageUrl || defaultImage"
+      [alt]="article?.coverImageUrl"
+      class="img"
+    />
+    <div [innerHTML]="article?.content"></div>
+  </div>
 
-<div class="loading" *ngIf="loading">
-  <oivan-progress-spinner height="30" width="30"></oivan-progress-spinner>
+  <div class="loading" *ngIf="loading">
+    <oivan-progress-spinner height="30" width="30"></oivan-progress-spinner>
+  </div>
 </div>
